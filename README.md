@@ -105,10 +105,12 @@ build out any helper methods if needed.
 - `Review property viewer()`
   <!-- [x] -->
   - Returns the viewer who wrote the review
+  <!-- [x] -->
   - Viewers must be `Viewer` instances
     - You will need to import `Viewer` _inside_ of this property to avoid a
       _circular import_.
 - `Review property movie()`
+  <!-- [x] -->
   - Returns the movie that is being reviewed
   - Movies must be `Movie` instances
     - You will need to import `Movie` _inside_ of this property to avoid a
