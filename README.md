@@ -62,11 +62,12 @@ build out any helper methods if needed.
 #### Movie
 
 - `Movie __init__(self, title)`
-  <!-- [ ] -->
+  <!-- [x] -->
   - `Movie` is initialized with a title (string)
-  <!-- [ ] -->
+  <!-- [x] -->
   - Title **can be** changed after the `Movie` is initialized
 - `Movie property title()`
+  <!-- [x] -->
   - Returns the `Movie`'s title
   - Titles must be strings greater than 0 characters
 

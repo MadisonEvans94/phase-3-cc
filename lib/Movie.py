@@ -1,6 +1,10 @@
 class Movie:
     
     def __init__(self, title):
+        if type(title) != str: 
+            raise Exception("Movie must be a string")
+        if len(title) < 1: 
+            raise Exception("Movie must be at least 1 character")
         self._title = title
 
     @property
@@ -9,6 +13,10 @@ class Movie:
     
     @title.setter
     def title(self, title): 
+        if type(title) != str: 
+            raise Exception("Movie must be a string")
+        if len(title) < 1: 
+            raise Exception("Movie must be at least 1 character")
         self._title = title
 
     def average_rating(self):
