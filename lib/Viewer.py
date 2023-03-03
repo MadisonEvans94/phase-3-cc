@@ -4,6 +4,7 @@ class Viewer:
         if len(username) <= 6 or len(username) >= 16: 
             raise Exception("Please enter a username that is proper length")
         self._username = username
+        self.reviews = []
 
     @property
     def username(self): 
