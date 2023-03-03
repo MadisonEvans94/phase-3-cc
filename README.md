@@ -71,10 +71,14 @@ build out any helper methods if needed.
 #### Viewer
 
 - `Viewer __init__(self, username)`
+  <!-- [x] -->
   - `Viewer` is initialized with a username (string)
+  <!-- [x] -->
   - Usernames **can be** changed after the Viewer is initialized
 - `Viewer property username()`
+  <!-- [ ] -->
   - Returns the Viewer's username
+  <!-- [ ] -->
   - Usernames must be _unique_ strings between 6 and 16 characters,
     inclusive
 
