@@ -36,11 +36,15 @@ class Viewer:
                 return mov
 
     def rate_movie(self, movie, rating):
-        if self.reviewed_movie(movie) == False: 
-            movie.reviews.append(rating)
-            movie.reviewers.append(self)
-        elif self.reviewed_movie(movie) == True:
-            pass 
+        if self.reviewed_movie(movie) == True: 
+            for review in self.reviews: 
+                if review.movie == movie: 
+                    review.rating = rating
+        elif self.reviewed_movie(movie) == False:
+            from lib.Review import Review
+            new_review = Review(self, movie, rating)
+            self.reviews.append(new_review)
+        
     
     @property 
     def reviews(self): 
