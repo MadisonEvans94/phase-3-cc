@@ -69,6 +69,7 @@ build out any helper methods if needed.
 - `Movie property title()`
   <!-- [x] -->
   - Returns the `Movie`'s title
+  <!-- [x] -->
   - Titles must be strings greater than 0 characters
 
 #### Viewer

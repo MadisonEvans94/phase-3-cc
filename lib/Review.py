@@ -9,6 +9,8 @@ class Review:
         self._movie = movie
         self._rating = rating
         
+        
+        
     @property
     def rating(self):
         return self._rating

@@ -6,6 +6,7 @@ class Movie:
         if len(title) < 1: 
             raise Exception("Movie must be at least 1 character")
         self._title = title
+        self.reviews = []
 
     @property
     def title(self): 
