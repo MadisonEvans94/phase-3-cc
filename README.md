@@ -76,7 +76,7 @@ build out any helper methods if needed.
   <!-- [x] -->
   - Usernames **can be** changed after the Viewer is initialized
 - `Viewer property username()`
-  <!-- [ ] -->
+  <!-- [x] -->
   - Returns the Viewer's username
   <!-- [ ] -->
   - Usernames must be _unique_ strings between 6 and 16 characters,
@@ -85,6 +85,7 @@ build out any helper methods if needed.
 #### Review
 
 - `Review __init__(self, viewer, movie, rating)`
+  <!-- [x] -->
   - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a
     rating (number)
 - `Review property rating()`
