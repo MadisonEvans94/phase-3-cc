@@ -17,7 +17,10 @@ class Viewer:
         self._username = username
         
     def reviewed_movie(self, movie):
-        pass
+        if movie in self._reviewed_movies:
+            return True
+        else: 
+            return False
 
     def rate_movie(self, movie, rating):
         pass
