@@ -20,9 +20,6 @@ class Review:
         if rating <=1 or rating >= 5: 
             raise Exception("Invalid rating. Must be between 1 and 5")
         self._rating = rating
-    
-
-    # rating property goes here!
 
     # viewer property goes here!
 

@@ -1,9 +1,15 @@
 class Movie:
     
     def __init__(self, title):
-        pass
+        self._title = title
 
-    # title property goes here!
+    @property
+    def title(self): 
+        return self._title
+    
+    @title.setter
+    def title(self, title): 
+        self._title = title
 
     def average_rating(self):
         pass

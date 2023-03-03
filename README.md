@@ -62,7 +62,9 @@ build out any helper methods if needed.
 #### Movie
 
 - `Movie __init__(self, title)`
+  <!-- [ ] -->
   - `Movie` is initialized with a title (string)
+  <!-- [ ] -->
   - Title **can be** changed after the `Movie` is initialized
 - `Movie property title()`
   - Returns the `Movie`'s title
@@ -89,7 +91,9 @@ build out any helper methods if needed.
   - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a
     rating (number)
 - `Review property rating()`
+  <!-- [x] -->
   - Returns the rating for the `Review` instance
+  <!-- [x] -->
   - Ratings must be integers between 1 and 5, inclusive
 
 ### Object Relationship Attributes and Properties
