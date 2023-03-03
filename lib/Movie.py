@@ -1,5 +1,5 @@
 class Movie:
-    
+    all = []
     def __init__(self, title):
         if type(title) != str: 
             raise Exception("Movie must be a string")
@@ -8,6 +8,7 @@ class Movie:
         self._title = title
         self._reviews = []
         self._reviewers = []
+        Movie.all.append(self)
 
     @property
     def title(self): 
@@ -31,7 +32,14 @@ class Movie:
 
     @classmethod
     def highest_rated(cls):
-        pass
+        highest_score = 0
+        highest_movie = None
+        for movie in cls.all: 
+            if movie.average_rating() > highest_score:
+                highest_movie = movie
+                highest_score = movie.average_rating()
+        return highest_movie
+                
 
     @property 
     def reviews(self):
