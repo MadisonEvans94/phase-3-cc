@@ -1,6 +1,6 @@
-from lib.Viewer import Viewer
-from lib.Movie import Movie
 
+from lib.Movie import Movie
+from lib.Viewer import Viewer
 class Review:
     
     def __init__(self, viewer, movie, rating):
@@ -10,6 +10,8 @@ class Review:
             raise Exception("Invalid rating. Must be between 1 and 5")
         if not isinstance(viewer, Viewer):
             raise Exception("Viewer must be Viewer")
+        if not isinstance(movie, Movie):
+            raise Exception("Movie must be Movie")
         self._viewer = viewer
         self._movie = movie
         self._rating = rating
@@ -32,5 +34,20 @@ class Review:
     @property 
     def viewer(self):
         return self._viewer
+    
+    @viewer.setter
+    def viewer(self, viewer): 
+        if not isinstance(viewer, Viewer):
+            raise Exception("Viewer must be Viewer")
+        self._viewer = viewer
 
     # movie property goes here!
+    @property 
+    def movie(self):
+        return self._movie
+    
+    @movie.setter
+    def movie(self, movie):
+        if not isinstance(movie, Movie):
+            raise Exception("Movie must be Movie")
+        self._movie = movie
