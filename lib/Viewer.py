@@ -1,10 +1,15 @@
 class Viewer:
+    usernames = []
     def __init__(self, username):
         if len(username) <= 6 or len(username) >= 16: 
             raise Exception("Please enter a username that is proper length")
+        if username in Viewer.usernames:
+            raise Exception("Please enter a username that is unique")
+        Viewer.usernames.append(username)
         self._username = username
         self._reviews = []
         self._reviewed_movies = []
+        
 
     @property
     def username(self): 
@@ -21,9 +26,21 @@ class Viewer:
             return True
         else: 
             return False
+        
+    def return_movie(self, movie):
+        if self.reviewed_movie == False: 
+            raise Exception("not found")
+        
+        for mov in self._reviewed_movies:
+            if movie == mov:
+                return mov
 
     def rate_movie(self, movie, rating):
-        pass
+        if self.reviewed_movie(movie) == False: 
+            movie.reviews.append(rating)
+            movie.reviewers.append(self)
+        elif self.reviewed_movie(movie) == True:
+            pass 
     
     @property 
     def reviews(self): 
