@@ -15,6 +15,8 @@ class Review:
         self._viewer = viewer
         self._movie = movie
         self._rating = rating
+        self._viewer.append_review(self)
+        self._viewer.reviewed_movies.append(self._movie)
         
         
         

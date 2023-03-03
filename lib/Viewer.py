@@ -26,14 +26,9 @@ class Viewer:
             return True
         else: 
             return False
-        
-    def return_movie(self, movie):
-        if self.reviewed_movie == False: 
-            raise Exception("not found")
-        
-        for mov in self._reviewed_movies:
-            if movie == mov:
-                return mov
+    
+    def append_review(self, review): 
+        self.reviews.append(review)    
 
     def rate_movie(self, movie, rating):
         if self.reviewed_movie(movie) == True: 
@@ -42,8 +37,9 @@ class Viewer:
                     review.rating = rating
         elif self.reviewed_movie(movie) == False:
             from lib.Review import Review
-            new_review = Review(self, movie, rating)
-            self.reviews.append(new_review)
+            Review(self, movie, rating)
+            
+    # ^ this should work, idk why it isnt :(
         
     
     @property 
