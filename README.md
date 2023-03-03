@@ -103,6 +103,7 @@ build out any helper methods if needed.
 #### Review
 
 - `Review property viewer()`
+  <!-- [x] -->
   - Returns the viewer who wrote the review
   - Viewers must be `Viewer` instances
     - You will need to import `Viewer` _inside_ of this property to avoid a
