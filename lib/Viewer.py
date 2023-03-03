@@ -37,3 +37,5 @@ class Viewer:
     
     def append_review(self, review): 
         self._reviews.append(review)
+        
+    

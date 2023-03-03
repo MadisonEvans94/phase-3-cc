@@ -22,7 +22,12 @@ class Movie:
         self._title = title
 
     def average_rating(self):
-        pass
+        sum_num = 0
+        for t in self._reviews:
+            sum_num = sum_num + t           
+        if(len(self._reviews) > 0): 
+            return (sum_num / len(self._reviews))
+        return 0
 
     @classmethod
     def highest_rated(cls):
