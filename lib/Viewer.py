@@ -4,7 +4,7 @@ class Viewer:
             raise Exception("Please enter a username that is proper length")
         self._username = username
         self._reviews = []
-        self.reviewed_movies = []
+        self._reviewed_movies = []
 
     @property
     def username(self): 
@@ -29,3 +29,11 @@ class Viewer:
     @reviews.setter
     def reviews(self, reviews):
         self._reviews = reviews
+        
+        
+    @property 
+    def reviewed_movies(self): 
+        return self._reviewed_movies
+    
+    def append_review(self, review): 
+        self._reviews.append(review)

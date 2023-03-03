@@ -119,15 +119,19 @@ build out any helper methods if needed.
 #### Viewer
 
 - `Viewer reviews`
+  <!-- [x] -->
   - Returns a list of `Review` instances associated with the `Viewer` instance.
 - `Viewer reviewed_movies`
+  <!-- [ ] -->
   - Returns a list of `Movie` instances reviewed by the `Viewer` instance.
 
 #### Movie
 
 - `Movie reviews`
+  <!-- [ ] -->
   - Returns a list of all the `Review` instances for the `Movie`.
 - `Movie reviewers`
+  <!-- [ ] -->
   - Returns a list of all of the `Viewer` instances that reviewed the `Movie`.
 
 ### Aggregate and Association Methods
